@@ -707,7 +707,7 @@ public class ClientForm extends javax.swing.JFrame {
                     transformer = tFactory.newTransformer();
 
                     DOMSource dom_source = new DOMSource(document);
-                    out_stream = new StreamResult("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\src\\organizer\\xml.xml");//StreamSource
+                    out_stream = new StreamResult("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\xml.xml");//StreamSource
                     transformer = tFactory.newTransformer();
                     transformer.transform(dom_source, out_stream);
                 } catch (TransformerConfigurationException ex) {
@@ -819,9 +819,9 @@ public class ClientForm extends javax.swing.JFrame {
             Component retValue;
             retValue = super.getTreeCellRendererComponent(tree, value, sel, expanded, leaf, row, hasFocus);
             if (launchedItemUserTree == value) {
-                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\src\\organizer\\16.png"));
+                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\16.png"));
             } else {
-                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\src\\organizer\\17.png"));
+                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\17.png"));
             }
             return retValue;
         }
@@ -836,14 +836,14 @@ public class ClientForm extends javax.swing.JFrame {
             DefaultMutableTreeNode v = (DefaultMutableTreeNode) value;
             Task task = (Task) v.getUserObject();
             if (task.getPerformanceNameUser() == null || task.getPerformanceNameUser().equals("")) {
-                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\src\\organizer\\17.png"));
+                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\17.png"));
                 return retValue;
             }
             if (task.getPerformanceNameUser().equals(userName)) {
-                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\src\\organizer\\16.png"));
+                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\16.png"));
                 return retValue;
             } else {
-                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\src\\organizer\\18.png"));
+                setIcon(new ImageIcon("D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\18.png"));
             }
             jPublicTree.repaint();
             return retValue;
