@@ -45,8 +45,8 @@ public class ThreadServer extends Thread {
     Document documentUserTree;
     Document documentPublicTree;
     String pathToUserTree;
-    String pathToRegistrationTable = "D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\server\\RegistrationTable.xml";
-    String pathToPublicTree = "D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\server\\PublicTree.xml";
+    String pathToRegistrationTable = "src\\organizer\\server\\RegistrationTable.xml";
+    String pathToPublicTree = "src\\organizer\\server\\PublicTree.xml";
     DocumentBuilder builder;
     TransformerFactory tFactory;
     LinkedList userList;
@@ -335,7 +335,7 @@ public class ThreadServer extends Thread {
         Node searchNodeByNameOnFirstLevel = searchNodeByNameOnFirstLevel(rootChildren, "userName");
         String userName = searchNodeByNameOnFirstLevel.getTextContent();
 
-        pathToUserTree = "D:\\Program\\Projects\\NetBeansProjects\\Organizer\\Organizer\\src\\organizer\\server\\usersTree\\"
+        pathToUserTree = "src\\organizer\\server\\usersTree\\"
                 + userName + ".xml";
         if (new File(pathToUserTree).exists()) {
             documentUserTree = builder.parse(pathToUserTree);
